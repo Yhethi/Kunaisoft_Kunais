@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="elements">
+      <img id="back" src="./img/kunaiBack.jpg" alt="" />
+
+      <div class="contKunai first">
+        <img class="byna" id="byna1" src="./img/binary.png" alt="" />
+        <img class="kunais" id="kunai1" src="./img/kunai.png" alt="" />
+      </div>
+      <div class="contKunai second">
+        <img class="byna" id="byna2" src="./img/binary.png" alt="" />
+        <img class="kunais" id="kunai2" src="./img/kunai.png" alt="" />
+      </div>
+      <div class="centrar">
+        <img class="logo" id="logo" src="./img/kunaiLogo.png" alt="" />
+      </div>
+    </div>
+    <a id="playSound" href="#" onclick="PlaySound()"></a>
+  </body>
+  <script>
+    let play = document.getElementById("playSound");
+    setTimeout(() => {
+      play.click();
+      setTimeout(() => {
+        play.click();
+      }, 50);
+    }, 470);
+
+    function PlaySound() {
+      let sound = new Audio("/sound/kunai2.mp3");
+      sound.play();
+    }
+  </script>
+</html>
